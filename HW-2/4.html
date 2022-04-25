@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        
+        
+        /**
+         * функция суммирует аргументы
+         * @param {number} arg1
+         * @param {number} arg2
+         * @returns {namber} sum        
+         */ 
+        function sum(arg1, arg2) {
+            let sum = arg1 + arg2;
+            return sum;
+        }
+
+        function sub(arg1, arg2) {
+            let sub = arg1 - arg2;
+            return sub;
+        }
+
+        function multiplication(arg1, arg2) {
+            let mult = arg1 * arg2;
+            return mult;
+        }
+
+        function div(arg1, arg2) {
+            let div = arg1 / arg2;
+            return div;
+        }
+
+        alert('сумма: ' + sum(4, 5));
+        alert('разница: ' + sub(4, 5));
+        alert('произведение: ' + multiplication(4, 5));
+        alert('деление: ' + div(4, 5));
+    </script>
+</body>
+</html>

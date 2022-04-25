@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        /* let deposit = prompt('сколько денег закинуть на ваш депозит?');
+        let lastSymbol = deposit.slice(-1); */
+        
+        //НЕ ПОНЯЛ ПОЧЕМУ НЕЛЬЗЯ КЕЙСАМИ СДЕЛАТЬ!?
+        /* switch(lastSymbol) {
+            case '5' || '6' || '7' || '8' || '9' || '0':    
+                alert('на вашем счету ' + deposit + ' рублей');
+                break;
+            case '1':
+                alert('на вашем счету ' + deposit + ' рубль');
+                break;
+            case '2' || '3' || '4':
+                alert('на вашем счету ' + deposit + ' рубля');
+                break;
+        } */
+
+        let deposit = prompt('сколько денег закинуть на ваш депозит?');
+        let lastSymbol = +deposit.slice(-1);
+        
+        if (lastSymbol == 0 || lastSymbol == 5 || lastSymbol == 6 || lastSymbol == 7 || lastSymbol == 8 || lastSymbol == 9) {
+            alert('на вашем счету ' + deposit + ' рублей');
+        }else if (lastSymbol == 1) {
+            alert('на вашем счету ' + deposit + ' рубль');
+        }else alert('на вашем счету ' + deposit + ' рубля');
+
+    </script>
+</body>
+</html>
