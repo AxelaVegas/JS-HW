@@ -31,7 +31,7 @@
     -->
 
     <script>
-        let firstStar = document.getElementById('first');
+/*         let firstStar = document.getElementById('first');
         let secondStar = document.getElementById('second');
         let thirdStar = document.getElementById('third');
         let fourthStar = document.getElementById('fourth');
@@ -47,7 +47,38 @@
 
         firstStar.addEventListener('mouseout', function() {
             firstStar.classList.remove(goldenClass);
-        });
+        }); */
+
+
+        'use strict';
+        let stars = document.querySelectorAll('i');
+        let goldenClass = 'golden';
+
+        for(let i = 0; i < stars.length; i++){
+            stars[i].addEventListener('mouseover', function(){
+                stars[i].classList.add(goldenClass);
+                for(let a = i; a > 0; a--) {
+                    stars[a-1].classList.add(goldenClass);
+                }
+            });
+        }
+        
+        /* НЕ СООБРАЖУ, как получить в методе FORICH номер элемента???? */
+
+        /* stars.forEach(function(star){
+            star.addEventListener('mouseover', function(event){
+                star.classList.add(goldenClass);
+                });
+            }); */
+        stars.forEach(function(star){
+            star.addEventListener('mouseout', function(){
+                
+                stars.forEach(function(star){
+                    star.classList.remove(goldenClass);
+                });
+            });  
+            });
+
     </script>
 </body>
 </html>
