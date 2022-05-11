@@ -44,9 +44,14 @@
     -->
 
     <script>
+        'use strict';
+        let x = document.querySelectorAll('span');
+        x.forEach(function(button){
+            button.addEventListener('click', closeClickHandler);
+        });
 
         function closeClickHandler(event) {
-           
+            event.currentTarget.parentNode.parentNode.style.display = 'none';
         }
     </script>
 </body>
